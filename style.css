@@ -105,7 +105,7 @@ nav a.navlink:hover::after{width:100%;}
 .hero p.lead{color:var(--ink-soft); font-size:17px; margin-bottom:30px; max-width:520px;}
 .hero .actions{display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
 .hero-image{position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5;}
-.hero-image img{width:100%; height:100%; object-fit:cover; transition:transform .6s ease;}
+.hero-image img{width:100%; height:100%; object-fit:cover; object-position:center 15%; transition:transform .6s ease;}
 .hero-image:hover img{transform:scale(1.04);}
 .hero-image .caption{
   position:absolute; left:0; right:0; bottom:0; padding:26px;
@@ -130,23 +130,23 @@ nav a.navlink:hover::after{width:100%;}
 .two-col p{color:var(--ink-soft); font-size:16px;}
 
 /* Cards grid (services) */
-.card-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
-.service-card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:transform .25s ease, box-shadow .25s ease;}
+.card-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px; align-items:stretch;}
+.service-card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:transform .25s ease, box-shadow .25s ease; display:flex; flex-direction:column;}
 .service-card:hover{transform:translateY(-6px); box-shadow:0 16px 30px rgba(74,51,35,.12);}
-.service-card img{width:100%; height:260px; object-fit:cover;}
-.service-card .body{padding:20px 22px;}
+.service-card img{width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center 20%;}
+.service-card .body{padding:20px 22px; flex:1;}
 .service-card h3{font-size:20px; margin-bottom:8px;}
 .service-card p{color:var(--ink-soft); font-size:14.5px; margin:0;}
 
 /* Gallery grid */
 .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
-.gallery img{width:100%; height:260px; object-fit:cover; border-radius:14px; transition:transform .3s ease;}
+.gallery img{width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center 15%; border-radius:14px; transition:transform .3s ease;}
 .gallery img:hover{transform:scale(1.03);}
 
 /* Before / After */
 .ba-wrap{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
 .ba-card{position:relative; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);}
-.ba-card img{width:100%; height:420px; object-fit:cover;}
+.ba-card img{width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center 12%;}
 .ba-label{
   position:absolute; top:16px; left:16px;
   background:var(--brown); color:#fff; font-size:12px; letter-spacing:1.5px;
